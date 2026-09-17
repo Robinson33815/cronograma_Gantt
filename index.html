@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ProjectLibre - Gantt EDT IA Evidencia Digital</title>
+<style>
+body{font-family:Arial;margin:20px;background:#fff;color:#222}
+h1{text-align:center;font-size:22px}
+.info{border:1px solid #aaa;padding:12px;background:#f2f2f2}
+.container{display:flex;border:1px solid #999;margin-top:20px;overflow:auto}
+.left table{border-collapse:collapse;width:720px}
+.left th,.left td{border:1px solid #bbb;padding:6px;font-size:13px}
+.left th{background:#1f4e78;color:white}
+.timeline{position:relative;width:900px;border-left:2px solid #777}
+.days{height:35px;display:flex;background:#eee;border-bottom:1px solid #aaa}
+.days span{width:45px;text-align:center;font-size:11px;padding-top:10px;border-right:1px solid #ccc}
+.row{height:32px;border-bottom:1px solid #ddd;position:relative}
+.bar{height:16px;position:absolute;top:8px;background:#4472c4;border-radius:3px}
+.phasebar{background:#808080}
+.critical{background:#c00000}
+.phase{font-weight:bold;background:#d9eaf7}
+.indent1{padding-left:20px!important}
+.indent2{padding-left:45px!important}
+.legend{margin:15px 0}
+.box{display:inline-block;width:18px;height:12px;margin-right:5px}
+</style>
+</head>
+
+<body>
+
+<h1>Cronograma Gantt - ProjectLibre</h1>
+
+<div class="info">
+<b>Proyecto:</b> Sistema de Inteligencia Artificial para apoyo al análisis de evidencia digital en investigaciones criminales en Ecuador<br>
+<b>Duración:</b> 180 días<br>
+<b>Método:</b> Ruta crítica CPM
+</div>
+
+<div class="legend">
+<span class="box" style="background:#4472c4"></span>Tareas
+<span class="box" style="background:#808080"></span>Fases
+<span class="box" style="background:#c00000"></span>Ruta crítica
+</div>
+
+<div class="container">
+
+<div class="left">
+<table>
+<tr>
+<th>ID</th><th>Nombre de tarea</th><th>Duración</th><th>Predecesora</th><th>Recursos</th>
+</tr>
+
+<tr class="phase"><td>1</td><td>Sistema IA evidencia digital</td><td>180 días</td><td>-</td><td>Equipo proyecto</td></tr>
+
+<tr class="phase"><td>1.1</td><td class="indent1">Gestión e inicio del proyecto</td><td>25 días</td><td>-</td><td>Director</td></tr>
+<tr><td>1.1.1</td><td class="indent2">Acta de constitución</td><td>5 días</td><td>-</td><td>Director</td></tr>
+<tr><td>1.1.2</td><td class="indent2">Requisitos del sistema</td><td>10 días</td><td>1.1.1</td><td>Analista</td></tr>
+<tr><td>1.1.3</td><td class="indent2">Plan de trabajo</td><td>10 días</td><td>1.1.2</td><td>Director</td></tr>
+
+<tr class="phase"><td>1.2</td><td class="indent1">Análisis y diseño del sistema IA</td><td>40 días</td><td>1.1</td><td>Equipo técnico</td></tr>
+<tr><td>1.2.1</td><td class="indent2">Arquitectura tecnológica</td><td>15 días</td><td>1.1.3</td><td>Arquitecto</td></tr>
+<tr><td>1.2.2</td><td class="indent2">Modelo IA análisis evidencia</td><td>15 días</td><td>1.2.1</td><td>Científico datos</td></tr>
+
+<tr class="phase"><td>1.3</td><td class="indent1">Desarrollo del sistema IA</td><td>60 días</td><td>1.2</td><td>Desarrolladores</td></tr>
+<tr><td>1.3.1</td><td class="indent2">Procesamiento evidencia digital</td><td>25 días</td><td>1.2.2</td><td>Programadores</td></tr>
+<tr><td>1.3.2</td><td class="indent2">Implementación modelo IA</td><td>25 días</td><td>1.3.1</td><td>Científico IA</td></tr>
+<tr><td>1.3.3</td><td class="indent2">Integración tecnológica</td><td>10 días</td><td>1.3.2</td><td>Equipo TI</td></tr>
+
+<tr class="phase"><td>1.4</td><td class="indent1">Pruebas e implementación</td><td>40 días</td><td>1.3</td><td>QA</td></tr>
+<tr><td>1.4.1</td><td class="indent2">Pruebas seguridad</td><td>15 días</td><td>1.3.3</td><td>QA</td></tr>
+<tr><td>1.4.2</td><td class="indent2">Validación investigadores</td><td>15 días</td><td>1.4.1</td><td>Usuarios</td></tr>
+<tr><td>1.4.3</td><td class="indent2">Puesta en operación</td><td>10 días</td><td>1.4.2</td><td>Equipo TI</td></tr>
+
+<tr class="phase"><td>1.5</td><td class="indent1">Cierre y documentación</td><td>15 días</td><td>1.4</td><td>Director</td></tr>
+<tr><td>1.5.1</td><td class="indent2">Informe final</td><td>10 días</td><td>1.4.3</td><td>Equipo</td></tr>
+<tr><td>1.5.2</td><td class="indent2">Cierre administrativo</td><td>5 días</td><td>1.5.1</td><td>Director</td></tr>
+
+</table>
+</div>
+
+<div class="timeline">
+<div class="days">
+<span>0</span><span>20</span><span>40</span><span>60</span><span>80</span><span>100</span><span>120</span><span>140</span><span>160</span><span>180</span>
+</div>
+<div class="row"><div class="bar phasebar" style="left:0px;width:900px"></div></div>
+<div class="row"><div class="bar phasebar" style="left:0px;width:125px"></div></div>
+<div class="row"><div class="bar critical" style="left:0px;width:25px"></div></div>
+<div class="row"><div class="bar critical" style="left:25px;width:50px"></div></div>
+<div class="row"><div class="bar critical" style="left:75px;width:50px"></div></div>
+<div class="row"><div class="bar phasebar" style="left:125px;width:200px"></div></div>
+<div class="row"><div class="bar critical" style="left:125px;width:75px"></div></div>
+<div class="row"><div class="bar critical" style="left:200px;width:75px"></div></div>
+<div class="row"><div class="bar " style="left:200px;width:50px"></div></div>
+<div class="row"><div class="bar phasebar" style="left:325px;width:300px"></div></div>
+<div class="row"><div class="bar critical" style="left:325px;width:125px"></div></div>
+<div class="row"><div class="bar critical" style="left:450px;width:125px"></div></div>
+<div class="row"><div class="bar critical" style="left:575px;width:50px"></div></div>
+<div class="row"><div class="bar phasebar" style="left:625px;width:200px"></div></div>
+<div class="row"><div class="bar critical" style="left:625px;width:75px"></div></div>
+<div class="row"><div class="bar critical" style="left:700px;width:75px"></div></div>
+<div class="row"><div class="bar critical" style="left:775px;width:50px"></div></div>
+<div class="row"><div class="bar phasebar" style="left:825px;width:75px"></div></div>
+<div class="row"><div class="bar critical" style="left:825px;width:50px"></div></div>
+<div class="row"><div class="bar critical" style="left:875px;width:25px"></div></div>
+
+</div></div>
+
+<h3>Ruta crítica</h3>
+<p>
+Acta de constitución → Requisitos del sistema → Plan de trabajo →
+Arquitectura tecnológica → Modelo IA → Desarrollo módulo IA →
+Implementación modelo IA → Integración → Pruebas → Validación →
+Puesta en operación → Informe final → Cierre administrativo.
+</p>
+
+</body>
+</html>
